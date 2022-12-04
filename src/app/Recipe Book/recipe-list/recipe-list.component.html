@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12" style="margin-bottom: 10px">
+      <button class="center-block btn btn-success" (click)="napraviNoviRecept()">New Recipe</button>
+  </div>
+</div>
+<div  class="row">
+  <div class="col-xs-12">
+    <app-recipe-item *ngFor="let i of recipes; let in = index"  [recept]="i" [index]="in"></app-recipe-item>
+  </div>
+</div>
+
+<!-- src="{{rec.imagePath}} STRING INTERPOLATION -->
+<!--[src]="rec.imagePath" PROPERTY BINDING-->
+<!-- Oboje postize isti razultat ali na drugi nacin-->
+
