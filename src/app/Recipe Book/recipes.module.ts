@@ -6,11 +6,10 @@ import {RecipesComponent} from "./recipes/recipes.component";
 import {RecipeStartComponent} from "./Recipe Start/recipe-start/recipe-start.component";
 import {RecipeEditComponent} from "./recipe-edit/recipe-edit.component";
 import {RouterModule} from "@angular/router";
-import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RecipesRoutingModule} from "./recipes-routing.module";
-import {DropdownDirective} from "../shared/dropdown.directive";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -24,10 +23,9 @@ import {DropdownDirective} from "../shared/dropdown.directive";
   ],
   imports: [
     RouterModule,
-    CommonModule,
     ReactiveFormsModule,
-    RecipesRoutingModule
-
+    RecipesRoutingModule,
+    SharedModule
   ]
 })
 
