@@ -2,9 +2,9 @@ import {NgModule} from "@angular/core";
 import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
 import {ShoppingListEditComponent} from "./shopping-list/shopping-list-edit/shopping-list-edit.component";
 import {RouterModule} from "@angular/router";
-import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
+import {LoggingService} from "../logging.service";
 
 @NgModule({
   declarations: [
@@ -15,12 +15,11 @@ import {SharedModule} from "../shared/shared.module";
     SharedModule,
     FormsModule,
     RouterModule.forChild([
-      {path: 'shopping-list', component: ShoppingListComponent},
-    ]),
-
+      {path: '', component: ShoppingListComponent},
+    ])
   ],
-  exports: []
-
+  exports: [],
+  //providers: [LoggingService]
   })
 
 export class ShopingListModule{
